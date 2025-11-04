@@ -1,0 +1,17 @@
+<link href="/css/style.css" rel="stylesheet" type="text/css">
+<!doctype html>
+<html>
+  <head>
+    <title> The <%=shopName%> </title>
+  </head>
+  <body>
+    <h1>Welcome to The <%=shopName%></h1>
+    <h2>Here are some things that we sell:</h2>
+    <ul>
+      <% for(let i = 0; i < productCategories.length; i++) { %>
+        <li><%= productCategories[i] %></li>
+      <% } %>
+
+    </ul>
+    </body>
+</html>

@@ -1,0 +1,19 @@
+<link href="/css/style.css" rel="stylesheet" type="text/css">
+<!doctype html> 
+<html>  
+  <head>  
+    <title>The <%=shopName%></title> 
+  </head>  
+  <body>  
+    <h1> This is the register page </h1> 
+    <form method="POST" action="/registered" style="width: 300px;"> 
+        First Name:<input id="first" type="text" name="first"/> 
+        <br/>
+        Last Name:<input id="last" type="text" name="last" />
+        <br/> 
+        Email:<input id="email" type="email" name="email"/>     <%# type changed to email to ensure proper email format %>
+        <br/> 
+        <input type="submit" value="OK" />  
+    </form> 
+</body>  
+</html> 

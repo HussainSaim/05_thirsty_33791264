@@ -1,0 +1,29 @@
+<link href="/css/style.css" rel="stylesheet" type="text/css">
+<!doctype html> 
+<html>  
+  <head>  
+    <title>The <%=shopName%></title> 
+  </head>  
+  <body>  
+    <h1> This is the Survey page </h1> 
+    <form method="POST" action="survey-complete"> 
+        First Name:<input id="first" type="text" name="first"/> 
+        <br/>
+        Last Name:<input id="last" type="text" name="last" />
+        <br/> 
+        Email:<input id="email" type="email" name="email"/>     
+        <br/>
+        Age:<input id="age" type="number" name="age" min="0"/>
+        <br/>
+        Category Consumed:<input id="category" type="radio" name="category" value="Soft Drinks"/> Soft Drinks
+                        <input type="radio" name="category" value="Beer"/> Beer
+                        <input type="radio" name="category" value="Wine"/> Wine
+                        <input type="radio" name="category" value="Hot Drinks"/> Hot Drinks
+        
+        Student: <input type="checkbox" name="studentY" value="Yes"/> Yes
+         
+        <input type="checkbox" name="studentN" value="No"/> No
+        <input type="submit" value="OK" /> 
+    </form> 
+</body>  
+</html> 

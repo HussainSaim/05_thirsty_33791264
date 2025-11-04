@@ -1,0 +1,36 @@
+body{
+    background-color: #000000;
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 20px;
+}
+h1{
+    color: #0c0cbb;
+}
+
+h2{
+    color: #0c0cbb;
+}
+ul{
+    list-style-type: square;
+    padding-left: 20px;
+}
+
+li{
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+form{
+    background-color: #0c0cbb;
+    padding: 15px;
+    border-radius: 5px;
+    max-width: 500px;
+}
+
+p{
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
