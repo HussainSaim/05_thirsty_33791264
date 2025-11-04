@@ -4,11 +4,11 @@ const router = express.Router();
 
 var shopData = {
     shopName: "Drinkers Delight",
-    productCategories: ["Beer", "Wine", "Soft Drinks", "Hot Drinks"],
-    shopLocations: [
+    productCategories: ["Beer", "Wine", "Soft Drinks", "Hot Drinks", "Coffee"],
+    shopLocations: [                //create new shopLocations array
         {
             city: "London",
-            manager: "John Smith",
+            manager: "John Smith",                          //multi-dimensional array to hold infomation for each shop
             address: "123 Oxford Street, London, W1D 1AA"
         },
         {
@@ -51,11 +51,12 @@ router.post("/registered", (req,res) => {
 
 // Separate survey routes
 router.get("/survey", (req,res) => {
-    res.render("survey.ejs", shopData);
+    res.render("survey.ejs", shopData);     
 });
 
-router.post("/survey-complete", (req,res) => {
+router.post("/survey-complete", (req,res) => {          //Messge showign inputted survey data
     res.send('Thank you ' + req.body.first + ' ' + req.body.last + ' for completing our survey! We appreciate your feedback. Your email is ' + req.body.email+ '. You indicated that you consume ' + req.body.category + ' and are ' + req.body.age + ' years old. You have also indicated that you are ' + (req.body.studentY ? 'a student.' : 'not a student.') );
 });
+
 // Export the router object so index.js can access it
 module.exports = router;

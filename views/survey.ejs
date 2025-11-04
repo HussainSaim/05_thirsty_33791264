@@ -13,13 +13,19 @@
         <br/> 
         Email:<input id="email" type="email" name="email"/>     
         <br/>
-        Age:<input id="age" type="number" name="age" min="0"/>
+        Age:<input id="age" type="number" name="age" min="0"/>          <%# Age input added as a number type with minimum 0%>
         <br/>
-        Category Consumed:<input id="category" type="radio" name="category" value="Soft Drinks"/> Soft Drinks
-                        <input type="radio" name="category" value="Beer"/> Beer
-                        <input type="radio" name="category" value="Wine"/> Wine
-                        <input type="radio" name="category" value="Hot Drinks"/> Hot Drinks
         
+        Category Consumed:
+        
+
+        <% for (let i = 0; i < productCategories.length; i++) {            <!--loop through productCategories array-->
+             const cat = productCategories[i]; %>                           <!--assign varibale to current array value-->
+          <input id="category-<%= i %>" type="radio" name="category" value="<%= cat %>" />  <!-- radio button for category -->
+          <%= cat %> <!-- display category name -->
+          
+        <% } %>
+        <br/>
         Student: <input type="checkbox" name="studentY" value="Yes"/> Yes
          
         <input type="checkbox" name="studentN" value="No"/> No

@@ -15,7 +15,7 @@ app.use(express.urlencoded({ extended: true }));
 const mainRoutes = require("./routes/main");  
 app.use('/', mainRoutes);
 
-app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + '/public')); // Serve static css file from the public folder
 
 
 // Start the web app listening
